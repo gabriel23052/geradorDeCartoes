@@ -84,3 +84,13 @@
     background-size: contain;
   }
 }
+
+@keyframes fade {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+

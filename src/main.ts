@@ -1,4 +1,4 @@
-import "./styles/style.css";
+import "./main.css";
 
 import patterns from "./patterns";
 
