@@ -65,11 +65,11 @@ let enableButton = false;
 dom.genButton.addEventListener("click", (e) => {
   e.preventDefault();
   if (enableButton) {
-    genCard(dom.input.value, Number(dom.select.value));
+    genArt(dom.input.value, Number(dom.select.value));
   }
 });
 
-/* -- Função que gera a imagem do cartão -- */
+/* -- Função que gera a imagem da arte -- */
 function genImg(
   name: string,
   pattern: TPattern,
@@ -95,12 +95,12 @@ function genImg(
   };
 }
 
-/* -- Função que apresenta o cartão -- */
-function genCard(name: string, patternIndex: number) {
+/* -- Função que apresenta a arte -- */
+function genArt(name: string, patternIndex: number) {
   genImg(name, patterns[patternIndex], (img) => {
     dom.image.src = img;
     modal.toggle();
     dom.downloadButton.href = img.replace("image/jpeg", "image/octet-stream");
-    dom.downloadButton.download = "cartão.jpeg";
+    dom.downloadButton.download = "arte.jpeg";
   });
 }

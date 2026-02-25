@@ -6,7 +6,7 @@ export default defineConfig({
     rolldownOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        cards: resolve(__dirname, "cards.html"),
+        artGenerator: resolve(__dirname, "artGenerator.html"),
       },
     },
   },
