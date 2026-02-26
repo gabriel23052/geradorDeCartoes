@@ -19,7 +19,7 @@
 <body>
   <img class="logo" src="svg/logo.svg" alt="Logo da Cresol">
   <main class="mainContainer">
-    <form class="form" action="./">
+    <form class="form" action="./" data-selector="form">
       <div class="form-field">
         <label class="t-label neutral-tx1" for="name">Nome</label>
         <input class="t-input neutral-bg0 neutral-tx0" type="name" name="name" id="name" autocomplete="off" maxlength="25" data-selector="nameInput">
@@ -28,9 +28,13 @@
         <label class="t-label neutral-tx1" for="model">Modelo</label>
         <select class="t-input neutral-bg0 neutral-tx0" data-selector="select" name="model" id="model"></select>
       </div>
-      <button class="form-submitButton t-buttonLabel neutral-bg2 neutral-tx2" data-selector="genBtn">CRIAR</button>
+      <a class="form-downloadLink t-buttonLabel neutral-bg2 neutral-tx2" data-selector="downloadLink" data-available="false">BAIXAR ARTE</a>
     </form>
-    <div class="preview"></div>
+    <div class="preview">
+      <p class="preview-noImageText t-paragraph neutral-tx1" data-selector="noImageText" data-show="true">Preencha um nome e escolha um modelo</p>
+      <img class="preview-image" data-selector="preview" data-show="false">
+      <img class="preview-loading" src="/svg/cresol-logo-loading.svg" alt="Carregando arte" data-selector="loading" data-show="false">
+    </div>
   </main>
   <footer class="credits">
     <p class="t-paragraph neutral-tx1">Desenvolvido por Gabriel G. Pereira</p>

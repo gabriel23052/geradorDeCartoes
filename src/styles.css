@@ -5,19 +5,19 @@
 }
 
 .mainContainer {
-  width: min(1200px, 100%);
+  width: min(800px, 100%);
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 32px;
   align-items: start;
   margin-inline: auto;
+  padding: 32px;
   box-shadow: var(--heavy-shadow);
   border-radius: 16px;
 }
 
 .form {
   width: 100%;
-  padding: 32px 20px;
   border-radius: 16px;
 }
 
@@ -72,7 +72,7 @@
   pointer-events: none;
 }
 
-.form-submitButton {
+.form-downloadLink {
   display: block;
   width: 100%;
   text-align: center;
@@ -81,20 +81,76 @@
   transition:
     300ms box-shadow,
     300ms background-color;
+  cursor: not-allowed;
+  user-select: none;
 }
-.form-submitButton.active {
-  color: var(--neutral-inv-tx0);
-  background: var(--primary-bg);
-  cursor: pointer;
-  box-shadow: var(--light-shadow);
-}
-.form-submitButton.active:hover {
+.form-downloadLink[data-available="true"]:hover {
   background-color: var(--primary-dark-bg);
   box-shadow: var(--hover-shadow);
 }
-.form-submitButton.active:focus {
+.form-downloadLink[data-available="true"]:focus {
   outline: 2px solid var(--primary-bg);
   outline-offset: 2px;
+}
+.form-downloadLink[data-available="true"] {
+  color: var(--neutral-inv-tx0);
+  background-color: var(--primary-bg);
+  cursor: pointer;
+}
+
+.preview {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.preview-noImageText {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1;
+  grid-row: 1;
+  padding: 16px;
+  opacity: 0;
+  transition: 300ms opacity;
+}
+.preview-noImageText[data-show="true"] {
+  opacity: 1;
+}
+
+.preview-loading {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  grid-column: 1;
+  grid-row: 1;
+  opacity: 0;
+  animation: loading 2s ease-in-out infinite;
+  transition: 300ms opacity;
+}
+.preview-loading[data-show="true"] {
+  opacity: 1;
+}
+
+.preview-image {
+  max-width: 100%;
+  height: 100%;
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 1px solid var(--neutral-bd1);
+  box-shadow: var(--heavy-shadow);
+  opacity: 0;
+  transition: 200ms opacity;
+}
+.preview-image[data-show="true"] {
+  opacity: 1;
 }
 
 .credits {
@@ -119,5 +175,14 @@
     text-align: center;
     position: static;
     transform: none;
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
