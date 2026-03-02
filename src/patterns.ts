@@ -18,7 +18,7 @@ const patterns: TPattern[] = [
     y: 140,
     imgFile: "patterns/ano_novo.jpg",
     font: "800 48px/48px 'BwModelica', sans-serif",
-    color: "#ffffff",
+    color: "#000000",
     quality: 0.9,
   },
   {
@@ -29,7 +29,7 @@ const patterns: TPattern[] = [
     y: 140,
     imgFile: "patterns/carro_novo.jpg",
     font: "800 48px/48px 'BwModelica', sans-serif",
-    color: "#ffffff",
+    color: "#000000",
     quality: 0.9,
   },
   {
@@ -40,7 +40,7 @@ const patterns: TPattern[] = [
     y: 140,
     imgFile: "patterns/casa_nova.jpg",
     font: "800 48px/48px 'BwModelica', sans-serif",
-    color: "#ffffff",
+    color: "#000000",
     quality: 0.9,
   },
   {
@@ -51,7 +51,7 @@ const patterns: TPattern[] = [
     y: 140,
     imgFile: "patterns/formatura.jpg",
     font: "800 48px/48px 'BwModelica', sans-serif",
-    color: "#ffffff",
+    color: "#000000",
     quality: 0.9,
   },
   {
@@ -62,7 +62,7 @@ const patterns: TPattern[] = [
     y: 140,
     imgFile: "patterns/luto.jpg",
     font: "800 48px/48px 'BwModelica', sans-serif",
-    color: "#ffffff",
+    color: "#000000",
     quality: 0.9,
   },
   {
@@ -84,7 +84,7 @@ const patterns: TPattern[] = [
     y: 140,
     imgFile: "patterns/nascimento.jpg",
     font: "800 48px/48px 'BwModelica', sans-serif",
-    color: "#ffffff",
+    color: "#000000",
     quality: 0.9,
   },
   {
@@ -95,7 +95,7 @@ const patterns: TPattern[] = [
     y: 140,
     imgFile: "patterns/saude.jpg",
     font: "800 48px/48px 'BwModelica', sans-serif",
-    color: "#ffffff",
+    color: "#000000",
     quality: 0.9,
   },
   {
@@ -106,7 +106,7 @@ const patterns: TPattern[] = [
     y: 140,
     imgFile: "patterns/viagem.jpg",
     font: "800 48px/48px 'BwModelica', sans-serif",
-    color: "#ffffff",
+    color: "#000000",
     quality: 0.9,
   },
 ];

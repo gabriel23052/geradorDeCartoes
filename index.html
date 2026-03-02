@@ -17,21 +17,37 @@
 </head>
 
 <body>
-  <img class="logo" src="svg/logo.svg" alt="Logo da Cresol">
-  <main class="mainContainer">
+  <header class="header">
+    <a class="header-logo" href="https://cresol.com.br/" target="_blank">
+      <img src="svg/logo.svg" alt="Logo da Cresol">
+    </a>
+    <div class="header-description">
+      <h1 class="t-title neutral-tx0">Criador de Artes</h1>
+      <p class="t-paragraph neutral-tx1">
+        Ferramenta automatizada para criação de artes personalizadas
+      </p>
+    </div>
+  </header>
+
+  <main class="mainContainer neutral-bg1">
     <form class="form" action="./" data-selector="form">
-      <div class="form-field">
+      <div class="form-field form-field-name">
         <label class="t-label neutral-tx1" for="name">Nome</label>
-        <input class="t-input neutral-bg0 neutral-tx0" type="name" name="name" id="name" autocomplete="off" maxlength="25" data-selector="nameInput">
+        <input class="t-input neutral-tx1 neutral-bg0" type="name" name="name" id="name" autocomplete="off" maxlength="25" data-selector="nameInput" placeholder="Nome do destinatário">
       </div>
-      <div class="form-field">
+      <div class="form-field form-field-pattern">
         <label class="t-label neutral-tx1" for="model">Modelo</label>
-        <select class="t-input neutral-bg0 neutral-tx0" data-selector="select" name="model" id="model"></select>
+        <select class="t-input neutral-bg0 neutral-tx1" data-selector="select" name="model" id="model"></select>
       </div>
-      <a class="form-downloadLink t-buttonLabel neutral-bg2 neutral-tx2" data-selector="downloadLink" data-available="false">BAIXAR ARTE</a>
+      <a class="form-downloadLink t-buttonLabel neutral-tx2" data-selector="downloadLink" data-available="false">
+        Baixar
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 -960 960 960">
+          <path d="M479-330 247-562l70-68 113 113v-331h98v331l113-113 70 68zM257.72-160q-40.45 0-69.08-28.79Q160-217.57 160-258v-72h98v72h444v-72h98v72q0 40.7-28.8 69.35T701.96-160z" />
+        </svg>
+      </a>
     </form>
     <div class="preview">
-      <p class="preview-noImageText t-paragraph neutral-tx1" data-selector="noImageText" data-show="true">Preencha um nome e escolha um modelo</p>
+      <p class="preview-noImageText t-paragraph neutral-tx1" data-selector="noImageText" data-show="true">Para começar, preencha um nome e escolha um dos modelos disponíveis.</p>
       <img class="preview-image" data-selector="preview" data-show="false">
       <img class="preview-loading" src="/svg/cresol-logo-loading.svg" alt="Carregando arte" data-selector="loading" data-show="false">
     </div>
