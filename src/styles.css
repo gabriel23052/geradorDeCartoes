@@ -11,6 +11,11 @@
 .header-cresolLogo {
   width: min(20rem, 100%);
 }
+.header-cresolLogo:focus {
+  outline: 2px solid var(--primary-bg);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
 
 .header-cresolLogo svg {
   width: 100%;
