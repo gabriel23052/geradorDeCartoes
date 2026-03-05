@@ -1,6 +1,6 @@
 {
-  "name": "Gerador de Artes",
-  "short_name": "Gerador de Artes",
+  "name": "Artetool",
+  "short_name": "Artetool",
   "icons": [
     {
       "src": "/favicon/web-app-manifest-192x192.png",
